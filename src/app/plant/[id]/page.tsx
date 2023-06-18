@@ -20,6 +20,7 @@ export default async function Page({ params }: { params: { id: string } }) {
                 <span className="font-bold">Luftfeuchtigkeit: {data.humidity}%</span>
                 <span className="font-bold">Lufttemperatur: {data.airTemperature/100}°C</span>
                 <span className="font-bold">Bodentemperatur: {data.soilTemperature}°C</span>
+                <img className="object-center object-fill" src="http://192.168.201.116:8000/stream.mjpg" />
             </div>
         </main>
     );
