@@ -8,6 +8,9 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className='grid grid-cols-4 gap-2 grid-flow-col place-content-center justify-items-center content-center'>
+      <div>
+          <Link className='p-24 pt-12 pb-12 rounded bg-green' href={`/camera`}>Kamera</Link>
+        </div>
      {plants.map(plant => (
         <div key={plant}>
           <Link className='p-6 pt-12 pb-12 rounded bg-green' href={`/plant/${plant}`}>{plant}</Link>
