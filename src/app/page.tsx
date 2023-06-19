@@ -1,6 +1,5 @@
 import axios from 'axios'
 import Link from 'next/link'
-import config from "../../config";
 
 export default async function Home() {
   let plants = await LoadPlants();
@@ -21,5 +20,5 @@ export default async function Home() {
 }
 
 async function LoadPlants():Promise<any[]> {
-  return (await axios.post(`http://${config.ServerAddress}:3000/getPlants`)).data;
+  return (await axios.post(`http://192.168.201.116:3000/getPlants`)).data;
 }
